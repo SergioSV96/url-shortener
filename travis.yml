@@ -1,0 +1,27 @@
+language: node_js
+node_js:
+  - latest
+dist: trusty
+sudo: false
+
+branches:
+  only:
+  - master
+
+cache:
+  directories:
+    - node_modules
+
+install:
+  - npm install -g yarn
+
+script:
+  - yarn lint
+  - yarn build --base-href https://sergiosv96.github.io/url-shortener/
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist/angular-url-shortener
+  on:
+    branch: gh-pages
