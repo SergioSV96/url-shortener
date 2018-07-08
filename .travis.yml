@@ -17,7 +17,7 @@ install:
 
 script:
   - yarn lint
-  - yarn build --base-href https://sergiosv96.github.io/url-shortener/
+  - yarn build --base-href https://sergiosv96.github.io/url-shortener/angular-url-shortener
 deploy:
   provider: pages
   skip_cleanup: true
