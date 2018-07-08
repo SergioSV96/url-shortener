@@ -16,6 +16,7 @@ install:
   - npm install -g @angular/cli
 
 script:
+  - npm update
   - cd angular-url-shortener
   - ng build --prod
   
