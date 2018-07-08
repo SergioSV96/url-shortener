@@ -17,7 +17,6 @@ install:
 
 script:
   - cd angular-url-shortener
-  - yarn lint
   - yarn build --base-href https://sergiosv96.github.io/url-shortener/
 deploy:
   provider: pages
