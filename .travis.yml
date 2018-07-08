@@ -8,16 +8,17 @@ branches:
   only:
   - master
 
+before_script:
+  - npm install -g @angular/cli
+
 cache:
   directories:
     - node_modules
 
-install:
-  - npm install -g yarn
-
 script:
   - cd angular-url-shortener
-  - yarn build --base-href https://sergiosv96.github.io/url-shortener/
+  - ng build --prod --base-href https://sergiosv96.github.io/url-shortener/
+  
 deploy:
   provider: pages
   skip_cleanup: true
