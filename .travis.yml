@@ -7,8 +7,6 @@ branches:
     except:
       - gh-pages # will be deployed to, no need to build it
       
-before_install: cd angular-url-shortener
-
 script:
     - npm run build # Generates the dist folder with built angular app
 
