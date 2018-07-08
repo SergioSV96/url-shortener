@@ -17,7 +17,7 @@ install:
 
 script:
   - cd angular-url-shortener
-  - ng build --prod --base-href https://sergiosv96.github.io/url-shortener/
+  - ng build --prod
   
 deploy:
   provider: pages
